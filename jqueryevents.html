@@ -23,7 +23,11 @@
     <script>
     
     (function() {
-      
+        $('button').click*(function () {
+         <!-- go into the DOM and fetch me buttons and when clicked run this function-->
+            console.log(this);<--this will refer to the button object that was clicked as indicated above in line 27--> <!-- rememeber we dont have access to jquery methods until we have invoked $ see below-->
+            console.log($(this));
+        });
     })(); <!--self-invoking anonymous function specific to js, create a function wrap in paranthesis and call(invoke) right after it so immediately when the page loads it will loadso now the page is local and not available to global scope-->
     </script>
 
