@@ -39,7 +39,8 @@
        <!--refer to jquery source for method understanding-->
        
        jquery.fn.flash = function( speed, easing, callback) {
-         return this.slidedown(1000);
+         return this.slidedown(500);
+         $(this).delay(2000).slideUp(500);
          console.log('hi there');
          
        }; <!-- jquery.fn just animates a function -->
