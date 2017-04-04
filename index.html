@@ -16,8 +16,8 @@
     
     <script src="jquery=1.7.1.js"></script>
     <script>
-      var lis = jQuery('ul li'); <!-- we are using the CSS selectors and js variables we are familiar with already-->
-      console.log(lis);
+      jQuery('ul li').addClass ('emphasis'); <!-- removed variable and console.lg and added class for DRY-->
+      $('ul li').addClass ('emphasis'); <--this is identical to above-->
     </script>
   </body>
 </html>
