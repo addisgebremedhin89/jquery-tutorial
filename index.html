@@ -14,8 +14,10 @@
     </script>
     
     <script>
-    
-      $(function() {
+      $('ul.emphasis') <!-- this will query the dom and grab the ul tag with a class of emphasis-->
+      $('ul.emphasis').children('li') <!-- this will style the direct child of a ul item-->
+      $('ul.emphasis').find('li') <--this will style ALL list items -->
+      $(function() { <!-- the jquery file we downloaded shows us that this is a shorthand for document ready-->
           $('li:first-child').addClass('emphasis');
       }); <!-- this also works the same as below-->
       
