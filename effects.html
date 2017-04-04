@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Appending Content</title>
+  </head>
+  
+  <body>
+    
+    <article>
+      
+      <h1>My Awesome Post</h1>
+      
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do elusmod tempor....
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do elusmod tempor....
+      </p>
+    </article>
+  
+  
+  
+  
+  
+  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+
+  
+    <script>
+      
+      (function() {
+        
+        $('article').append('Hello from the Javascript'); <!-- add string to the end of article-->
+        $('article').prepend('Hello from the Javascript'); <!-- add string to the top of article -->
+        $('h1').after('Hello from the Javascript');  <!-- go to h1 element and add string after it-->
+        
+      })();
+      
+      
+    </script>
+  </body>
+</html>
