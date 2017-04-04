@@ -18,9 +18,13 @@
       $('ul.emphasis').children('li') <!-- this will style the direct child of a ul item-->
       $('ul.emphasis').find('li') <--this will style ALL list items -->
       $('ul.emphasis').children('li').eq(0).text('added jQuery'); <!-- eq is the same as nth-child but it is determined by the js zero based index where 0 is the first child-->
-      <!--the above are examples of js chaining where methods can be called on one another -->
+      $('ul.emphasis').children('li').eq(0).text('added jQuery'); <!-- eq is the same as nth-child but it is determined by the js zero based index where 0 is the first child-->
+      $('ul.emphasis')
+          .children('li')
+          .eq(3)
+          .prev().text('added jQuery'); <!-- eq is the same as nth-child but it is determined by the js zero based index where 0 is the first child-->
       <!-- you dont have to chain you can indent for feedback-->
-      $('ul.emphasis li 3 next')text('added jQuery'); <!-- you can specific your selector like this(first paranthesis) but traversing (chaining) like we did above is useful when you cant specify the selecltor
+      $('ul.emphasis li:nth-child(3) next')text('added jQuery'); <!-- you can specific your selector like this(first paranthesis) but traversing (chaining) like we did above is useful when you cant specify the selecltor
       <!--DOM isafamily tree-->
       $('ul.emphasis').children('li').eq(0).next.prev.text('added jQuery'); <!-- dot next and dot prev are methods you can use to specific which direction from that eq item to go to-->
       $(function() { <!-- the jquery file we downloaded shows us that this is a shorthand for document ready-->
@@ -30,6 +34,9 @@
       $(document).ready(function () { <!-- here we are sayig when the document has loaded and is ready, apply the following js functionality-->
           $('li: first-child').addClass('emphasis');
       });
+      
+      
+      
       
     </script>
   </head>
