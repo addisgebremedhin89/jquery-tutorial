@@ -29,6 +29,14 @@
             console.log($(this));
         });
     })(); <!--self-invoking anonymous function specific to js, create a function wrap in paranthesis and call(invoke) right after it so immediately when the page loads it will loadso now the page is local and not available to global scope-->
+    
+    <!-- as always we dont want to repeat ourselve so lets be DRY-->
+    var uls = $('ul');<!-- now we created a variable that access jquery on the ul so we can use that for referencing jquery methods as seen below-->
+    <!--we've cached this into a variable -->
+    uls.click();
+    uls.find('li:first-child').text();
+    
+    
     </script>
 
 
