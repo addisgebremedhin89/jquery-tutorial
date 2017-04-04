@@ -38,13 +38,28 @@
         dd.toggle(); if its visible hide it if its hidden show
         -->
       $('dt').on('mouseenter'(aka hover) , function() {
-          $(this)
-            .next()
-            .show()
+          $(this)  <!--is is dt that is hovered over -->
+            .next() <!-- get the element that follows it -->
+            .show() <!--and show it -->
+            .siblings('dd') <!-- we changed our mind and actually wanted the siblings to  -->
+            .hide(); <!-- hide when one is hovered over -->
+        <!-- or we can do slide up and down -->
+            .slideDown(200) <!--milliseconds-->
             .siblings('dd')
-            .hide();
-
-      })
+            .slideUp(200);
+    <!-- with this example above we are assigning an on method to each dt which could be done better with one on method on the parent -->
+    
+    <!--event delegation 101, attaching an event listener to the parent-->
+    
+      $('dl).on('mouseenter'(aka hover) ,'dt' function(){ <! when user hovers over dl i am only interested in callig this run back function on the condition that what the user hovered over is a dt then follow through and call this function -->
+          $(this)  <!--is is dt that is hovered over -->
+            .next()
+            .slideDown(200) <!--milliseconds-->
+            .siblings('dd')
+            .slideUp(200);
+    
+    
+      });
     })();
     </script>
 
