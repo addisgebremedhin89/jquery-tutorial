@@ -19,7 +19,24 @@
   <script>
     <!-- this will refer to whatever object owns it, the parent-->
     
+    var obj = {
+      doIt: function(e) {
+        e.preventDefault();
+        console.log(this);
+      }
+    }
+  $('a').on('click', obj); <!--this still refers to a tag-->
+  <!--instead you can do this-->
+  
+  $('a').on('click', function(e) {
+    obj.doIt();
     
+    e.preventDefault();
+    
+  });
+  
+  $('a').on('click', $.proxy(obj.doIt, obj))
+    <!-- can use $.proxy and pass parameters of function and what you want this to refer to, used for specificying what should be refered to as "this" do more research on jquery($)dot proxy-->
     <!-- how do you get a a tag to not link to the site we tagged it to-->
     function doSomething(e) {
       e.preventDefault();
