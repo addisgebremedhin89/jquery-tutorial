@@ -31,6 +31,10 @@
       <!--DOM isafamily tree-->
       $('li').parent();.removeClass('emphasis');
       <!--list item get the  parent remove class emphasis-->
+      <!--parent is for your direct parent just like .children is for direct children-->
+      <!--parents is like find -->
+      <!-- another method is "closest" research on api.jquery.com-->
+      
       $(function() { <!-- the jquery file we downloaded shows us that this is a shorthand for document ready-->
           $('li:first-child').addClass('emphasis');
       }); <!-- this also works the same as below-->
@@ -47,9 +51,26 @@
   
   <body>
     
-    <ul>
-      <li>hello</li>
-    </ul>
+    <div class="container">
+      <h1>Welcome to My Website</h1>
+      
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do elusmod tempor....
+      </p>
+      
+      <ul class="emphasis">
+          <li>Item</li>
+          <li>Item1</li>
+          <li>Item2</li>
+          <li>Item3</li>
+          <li>Item4</li>
+          <li>
+            <ul>
+              <li>hello from the nest.</li>
+            </ul>
+          </li>
+      </ul>
+    </div>
     
     <script src="jquery=1.7.1.js"></script>
     <script>
