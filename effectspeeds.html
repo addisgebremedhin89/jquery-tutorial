@@ -29,6 +29,15 @@
 
   <script>
     
+    
+    $('div.content').hide();
+    
+    $('h1').on('click', function() {
+       $(this).next().slideDown(2000); <!--all of the elements after h1 element slide down when clicked at 2 seconds-->
+       
+       <!--other speed options in slow and fast-->
+    })
+    
   </script>
   
   
