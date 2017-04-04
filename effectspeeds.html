@@ -37,6 +37,16 @@
        
        <!--other speed options in slow and fast-->
        <!--refer to jquery source for method understanding-->
+       
+       jquery.fn.flash = function( speed, easing, callback) {
+         return this.animate( props, speed, easing, callback);
+         
+       }; <!-- jquery.fn just animates a function -->
+       
+      $('h1').on('click', function() {
+        $(this).next('div.content').flash(); <!--here we use our custom method-->
+        
+      });
     })
     
     
