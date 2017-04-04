@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>The this Keyword</title>
+  </head>
+    
+  
+  <body>
+    
+    <a href="http://tutsplus.com">Click Me</a>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+
+
+
+
+  
+  <script>
+    <!-- this will refer to whatever object owns it, the parent-->
+    
+    
+    <!-- how do you get a a tag to not link to the site we tagged it to-->
+    function doSomething(e) {
+      e.preventDefault();
+      <!--console.log(e); //e means event-->
+      console.log(this); <!-- this is referring to the a tag -->
+    }
+    
+  $('a').on('click', doSomething);
+    
+  </script>
+  
+  </body>
+
+</html>

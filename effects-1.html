@@ -30,8 +30,15 @@
         $('html').addClass('js');
         
         var contactForm - {
+          
+         container: $('#contact'),
+           
+         config: {
+           effect: 'slideToggle'
+         },
           init:function() {
           <!--it is our constructor-->
+          
           $('<button></button>', {
               text: 'Contact Me'
           })
@@ -48,7 +55,10 @@
             .prependTo(this)
             .on('click', function() {
               <!-- taking out : contactForm.container.show();-->
-              $this.hide();
+              <!-- $this.hide();-->
+              <!--above replaced with slide toggle -->
+              $this[contactForm.config.effect](500); <!--refer to line 36-->
+            })
         },
           }
       })
