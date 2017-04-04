@@ -37,13 +37,18 @@
        
        <!--other speed options in slow and fast-->
        <!--refer to jquery source for method understanding-->
-       
+
+    <!--CREATING YOUR OWN EFFECTS-->
+    
        jquery.fn.flash = function( speed, easing, callback) {
-         return this.slidedown(500);
+         
+         var $this = $(this);
+         
+         return this.slidedown(500, function() {
+          
          $(this).delay(2000).slideUp(500);
          console.log('hi there');
-         
-       }; <!-- jquery.fn just animates a function -->
+      });  <!-- jquery.fn just animates a function -->
        
       $('h1').on('click', function() {
         $(this).next('div.content').flash(); <!--here we use our custom method-->
@@ -52,7 +57,9 @@
     })
     
     
-    <!--CREATING YOUR OWN EFFECTS-->
+    <!--full control with animate-->
+    <!--will need to review 3.5-->
+    
     
   </script>
   
