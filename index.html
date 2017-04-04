@@ -14,6 +14,11 @@
     </script>
     
     <script>
+    
+      $(function() {
+          $('li:first-child').addClass('emphasis');
+      }); <!-- this also works the same as below-->
+      
       $(document).ready(function () { <!-- here we are sayig when the document has loaded and is ready, apply the following js functionality-->
           $('li: first-child').addClass('emphasis');
       });
