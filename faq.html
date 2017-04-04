@@ -3,7 +3,7 @@
   <head>
     <meta charset=utf-8>
     <title>jQuery Events 201</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
     
   </head>
   <body>
@@ -26,7 +26,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
     
     <script>
+    
+    (function () {
+      
+      var dd = $('dd'); <!-- this is a variable object for all of the the dd elements-->
+      dd.filter(':nth-child(n+4)').addClass('hide');
+      the above will filter down the criteria for line 33 and so on each 4th detail itll hide-->
+      <!-- optional methods to use
+        dd.hide();
+        dd.show();
+        dd.toggle(); if its visible hide it if its hidden show
+        -->
+      $('dt').on('mouseenter'(aka hover) , function() {
+          $(this)
+            .next()
+            .show()
+            .siblings('dd')
+            .hide();
+
+      })
+    })();
     </script>
-  
+
   </body>
 </html>
