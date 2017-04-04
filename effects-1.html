@@ -38,7 +38,18 @@
           .insertAfter('article:first')
           .on('click', this.show) <!-- when user clicks the object contactForm and show-->
         <!--still dont understand why we dont call the show method above and the teacher actually coded the method-->
-            
+        
+        show: function() {
+          contactForm.container.show();
+        },
+        close: function() {
+          var $this = $(this);
+          $('<span class = close>X</span>')
+            .prependTo(this)
+            .on('click', function() {
+              <!-- taking out : contactForm.container.show();-->
+              $this.hide();
+        },
           }
       })
     </script>
