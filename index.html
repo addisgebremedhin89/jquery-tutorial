@@ -9,7 +9,15 @@
        <!--in the case that jquery is required on the html document this is how it'll look-->
       .emphasis { font-weight:bold;}
     
-    </style>
+      </style>
+    
+    </script>
+    
+    <script>
+      $(document).ready(function () { <!-- here we are sayig when the document has loaded and is ready, apply the following js functionality-->
+          $('li: first-child').addClass('emphasis');
+      });
+      
     </script>
   </head>
   
