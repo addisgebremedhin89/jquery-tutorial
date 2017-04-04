@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>The this Keyword</title>
+  </head>
+    
+  
+  <body>
+    
+    <div class="box">
+ 
+      <h2>Hi There</h2>
+        <p>
+          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+        </p>
+        
+    </div>
+    
+    <p><button>FadesSlideToggle</button></p>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+
+
+
+    <script>
+      
+    (function () {
+      
+      var box = $('div.box');
+      
+      $.fn.FadeSlideToggle = function() {
+          console.log('fading and sliding');
+      };
+      
+      $('button').on('click', function () {
+            box.FadeSlideToggle();
+      });
+      
+    
+    })();
+    </script>
+  
+  
+  </body>
+</html>
