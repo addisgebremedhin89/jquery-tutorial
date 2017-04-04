@@ -36,6 +36,14 @@
     uls.click();
     uls.find('li:first-child').text();
     
+    (function() {
+        $('button').click*(function () {
+            var stylesheet = $(this).text().toLowerCase();
+            console.log(stylesheet);
+            $('link').after('href, stylesheet+ '.css');
+        });
+    })(); <!-- not too clear on this, we set our button to switch stylesheets-->
+    
     
     </script>
 
