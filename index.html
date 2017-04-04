@@ -34,6 +34,7 @@
       <!--parent is for your direct parent just like .children is for direct children-->
       <!--parents is like find -->
       <!-- another method is "closest" research on api.jquery.com-->
+      <!--subtle difference between closest and parents method, closest returns the very first parent it finds, parents will go all the way up the tree and grab all parents-->
       
       $(function() { <!-- the jquery file we downloaded shows us that this is a shorthand for document ready-->
           $('li:first-child').addClass('emphasis');
