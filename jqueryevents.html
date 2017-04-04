@@ -45,6 +45,16 @@
     })(); <!-- not too clear on this, we set our button to switch stylesheets-->
     
     
+    <!-- below is a DRY version of the above-->
+    (function() {
+        var link = $('link');
+        $('button').click(function()
+            var stylesheet = $(this).data('file');
+            link.attr('href, stylesheet + '.css');
+        });
+    })
+    
+    
     </script>
 
 
